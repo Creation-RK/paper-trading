@@ -69,6 +69,12 @@ npm run build:artifact # one self-contained HTML file in dist-artifact/
 
 On a phone, open the hosted site and choose **Add to Home Screen**. It installs as an app (PWA) and works offline. Progress is saved on the device.
 
+### GitHub Pages
+
+The site is served from the `gh-pages` branch at `https://creation-rk.github.io/paper-trading/`. The **Deploy to GitHub Pages** workflow rebuilds it on every push to `main` and after each daily market-data fetch, so new sessions go live automatically.
+
+One-time setup in the repository's **Settings → Pages**: set **Source** to *Deploy from a branch*, then pick `gh-pages` and `/ (root)`. GitHub Pages needs a public repository, or a paid plan (Pro, Team or Enterprise) for a private one. A Pages site is public even when the repository is private.
+
 ## Project layout
 
 ```
