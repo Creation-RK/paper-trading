@@ -1,0 +1,14 @@
+{
+  "name": "Paper Scalper",
+  "short_name": "Scalper",
+  "description": "Replay yesterday's NIFTY 50 and Crude Oil sessions and paper-trade options with your own system.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c1018",
+  "theme_color": "#0c1018",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
