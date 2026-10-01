@@ -1,0 +1,38 @@
+name: Fetch market data
+
+# Saves yesterday's NIFTY 50 and Crude Oil sessions into public/data so the
+# daily game replays real market data. Runs at 07:00 IST, Tuesday to Saturday,
+# after crude's 23:30 IST close.
+on:
+  schedule:
+    - cron: '30 1 * * 2-6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-market-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download sessions
+        run: node scripts/fetch-session.mjs --keep 30
+      - name: Commit new data
+        run: |
+          if [ -n "$(git status --porcelain public/data)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+            git add public/data
+            git commit -m "Market data $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No new sessions."
+          fi

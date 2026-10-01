@@ -151,7 +151,7 @@ describe('systems', () => {
     const sys = defaultSystem();
     expect(sys.indicators.map((i) => i.type)).toEqual(['ursi', 'vwap', 'ema', 'orb']);
     expect(ruleLabel(sys.callRules[0], sys.indicators)).toBe('Price is above ORB High');
-    expect(ruleLabel(sys.callRules[2], sys.indicators)).toBe('Ultimate RSI URSI is above 50');
+    expect(ruleLabel(sys.callRules[2], sys.indicators)).toBe('Ultimate RSI is above 50');
     const pruned = pruneRules({ ...sys, indicators: sys.indicators.filter((i) => i.type !== 'orb') });
     expect(pruned.callRules).toHaveLength(2);
   });

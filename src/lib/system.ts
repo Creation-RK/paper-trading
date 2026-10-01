@@ -84,8 +84,8 @@ export function operandLabel(op: Operand, indicators: IndicatorInstance[]): stri
   if (!inst) return 'Removed indicator';
   const def = getIndicatorDef(inst.type);
   const name = indicatorLabel(inst);
-  if (def.outputs.length === 1) return name;
   const out = def.outputs.find((o) => o.key === op.output);
+  if (def.outputs.length === 1 || out?.primary) return name;
   return `${name} ${out ? out.label : op.output}`;
 }
 

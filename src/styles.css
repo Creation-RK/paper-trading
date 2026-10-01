@@ -1518,7 +1518,7 @@ button:disabled {
 .stat strong {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 18px;
+  font-size: clamp(14px, 4.1vw, 18px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

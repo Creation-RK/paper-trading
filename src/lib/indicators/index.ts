@@ -20,6 +20,8 @@ export interface OutputSpec {
   color: string;
   /** `hidden` outputs are not drawn but can be used in system rules. */
   style: 'line' | 'dashed' | 'histogram' | 'hidden';
+  /** The main line, named in rules by the indicator name alone. */
+  primary?: boolean;
 }
 
 export interface IndicatorContext {
@@ -175,7 +177,7 @@ const URSI: IndicatorDef = {
     { key: 'smooth', label: 'Signal smoothing', min: 1, max: 100, step: 1, default: 14 },
   ],
   outputs: [
-    { key: 'value', label: 'URSI', color: '#1fa392', style: 'line' },
+    { key: 'value', label: 'URSI', color: '#1fa392', style: 'line', primary: true },
     { key: 'signal', label: 'Signal', color: '#f26b1d', style: 'line' },
   ],
   levels: [80, 50, 20],
@@ -239,7 +241,7 @@ const SUPERTREND: IndicatorDef = {
   outputs: [
     { key: 'up', label: 'Up trend', color: '#2f9e6e', style: 'line' },
     { key: 'down', label: 'Down trend', color: '#d64553', style: 'line' },
-    { key: 'value', label: 'Line', color: '#888888', style: 'hidden' },
+    { key: 'value', label: 'Line', color: '#888888', style: 'hidden', primary: true },
     { key: 'direction', label: 'Direction', color: '#888888', style: 'hidden' },
   ],
   label: (p) => `Supertrend (${p.period}, ${p.multiplier})`,
@@ -325,7 +327,7 @@ const MACD: IndicatorDef = {
     { key: 'signal', label: 'Signal', min: 1, max: 100, step: 1, default: 9 },
   ],
   outputs: [
-    { key: 'macd', label: 'MACD', color: '#3d64e0', style: 'line' },
+    { key: 'macd', label: 'MACD', color: '#3d64e0', style: 'line', primary: true },
     { key: 'signal', label: 'Signal', color: '#f26b1d', style: 'line' },
     { key: 'hist', label: 'Histogram', color: '#8a93a6', style: 'histogram' },
   ],

@@ -63,7 +63,7 @@ export function Scorecard() {
               <div style={{ minWidth: 0 }}>
                 <strong>{profile.name}</strong>
                 <div className="help num">
-                  {stats.trades} trades · {Math.round(stats.winRate * 100)}% wins · {rupees(stats.balance)}
+                  {stats.trades} trade{stats.trades === 1 ? '' : 's'} · {Math.round(stats.winRate * 100)}% wins · {rupees(stats.balance)}
                 </div>
               </div>
               <div className="podium-pts num">
