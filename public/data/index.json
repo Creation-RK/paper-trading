@@ -1,4 +1,28 @@
 {
-  "updatedAt": null,
-  "sessions": {}
+  "updatedAt": "2026-10-02T07:18:10.843Z",
+  "sessions": {
+    "2026-09-24": [
+      "NIFTY50"
+    ],
+    "2026-09-25": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-09-28": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-09-29": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-09-30": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-01": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ]
+  }
 }
