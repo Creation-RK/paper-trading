@@ -1,0 +1,51 @@
+{
+  "updatedAt": "2026-10-10T07:19:54.029Z",
+  "sessions": {
+    "2026-09-24": [
+      "NIFTY50"
+    ],
+    "2026-09-25": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-09-28": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-09-29": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-09-30": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-01": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-02": [
+      "CRUDEOIL"
+    ],
+    "2026-10-05": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-06": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-07": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-08": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-10-09": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ]
+  }
+}
