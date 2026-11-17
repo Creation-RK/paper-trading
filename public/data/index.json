@@ -1,10 +1,6 @@
 {
-  "updatedAt": "2026-11-14T07:42:24.954Z",
+  "updatedAt": "2026-11-17T09:22:09.545Z",
   "sessions": {
-    "2026-10-05": [
-      "CRUDEOIL",
-      "NIFTY50"
-    ],
     "2026-10-06": [
       "CRUDEOIL",
       "NIFTY50"
@@ -116,6 +112,10 @@
       "NIFTY50"
     ],
     "2026-11-13": [
+      "CRUDEOIL",
+      "NIFTY50"
+    ],
+    "2026-11-16": [
       "CRUDEOIL",
       "NIFTY50"
     ]
